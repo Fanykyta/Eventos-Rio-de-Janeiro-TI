@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Rio de janeiro Eventos</title>
+    <link href="Css/estilo.css" rel="stylesheet" type="text/css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="js/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/js-fan.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#cadastroeve").click(function () {
+                $("#home").hide();
+                $("#desenvolvedoras").hide();
+                $("#cadastro").fadeIn(500);
+            });
+            $("#desenveloper").click(function () {
+                $("#home").hide();
+                $("#cadastro").hide();
+                $("#desenvolvedoras").fadeIn(500);
+            });
+
+            $("#Inicio").click(function () {
+                $("#cadastro").hide();
+                $("#desenvolvedoras").hide();
+                $("#home").fadeIn(500);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <header id="painel" class="mt-3 ">
+            <div id="caro" class="conte">
+                <!--            front da pagina e carrosel-->
+                <div id="demo" class="carousel slide one bodeinfc " data-ride="carousel">
+                    <!--Indicators -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+                    <!--                     The slideshow -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="imagens/Code-in-rio.jpg" alt="code in rio" width="1100" height="500">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagens/Js-ladies.png" alt="js ladies" width="1100" height="500">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagens/rioinfo.jpg.jpg" alt="rio info" width="1100" height="500">
+                        </div>
+                    </div>
+                    <!--                     Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+                <!--  informação da pagina-->
+            </div>
+        </header>
+        <div id="conteudo">
+            <div id="navbar" class="bodeinff">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark text-center navf">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+                        <ul class="nav navbar-nav bodenavf" role="tablist">
+                            <li class="nav-item">
+                                <a class="navbar-brand fan" data-toggle="pill" id="Inicio" href="#home">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="navbar-brand fan" data-toggle="pill" id="cadastroeve" href="#cadastro">Cadastro De Eventos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="navbar-brand fan" data-toggle="pill" id="desenveloper" href="#desenvolvedoras">Desenvolvedoras</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- Tab panes -->
+                <div class="tab-content cardf">
+                    <div id="home" class="tab-pane active">
+                        <div class="row">
+                            <div class="col-lg-4 p-0">
+                                <div class="calendario p-0">
+                                    <div class="ml-lg-5 p-0">
+                                        <img src="imagens/pao-de-acucar-logo.png" alt="eventos rio de janeiro - logo" class="ml-lg-5" width="300" height="100%">
+                                    </div>
+                                    <p>A API organiza os eventos da área de tecnologia na região do Rio de Janeiro com o intuito de formar um calendário que informe quando e onde está ocorrendo e se há disponibilidade de vagas.
+                                    </p>
+                                    <p>A API recebe dados através de cadastro dos eventos por parte dos organizadores.
+                                    </p>
+                                    <p>Tem como objetivo centralizar os eventos de tecnologias em uma mesma plataforma de fácil acesso e ainda facilitar a divulgação dos mesmos pelas redes sociais e através do hotsite.
+                                    </p>
+                                </div>
+                            </div>
+                            <section id="sobrecontato" class="col-lg-8">
+                                <div class="calendario">
+                                    <h2 class="p-3 bordetf">Eventos do mês.</h2>
+                                    <img src="imagens/calendario-setembro-2018-50ds.jpg" class="img-fluid" alt="">
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <!-- class="col-lg-2 input-group-text mt-lg-2"
+                   class="col-lg-8 form-control mt-lg-2"-->
+                    <div id="cadastro" class="container tab-pane">
+                        <form action="" method="post">
+                            <h3 class="pt-3 bordetf">Preencha o Formulário</h3>
+                            <div class="row">
+                                <div class="form-group col-lg-6">
+                                    <label for="nome_evento">Nome do Evento:</label>
+                                    <input type="text" id="nome_evento" class="form-control bodeinf">
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label for="titulo">Titulo do evento:</label>
+                                    <input type="text" class="form-control bodeinf" id="titulo">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-lg-6">
+                                    <label for="data_evento">Data do evento: </label>
+                                    <input type="data" class="form-control bodeinf" id="data_evento" placeholder="Ex: DD/MM/AAAA">
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label for="hora">Horário:</label>
+                                    <input type="time" class="form-control bodeinf" id="hora" placeholder="Ex: HH:MM">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="local">Local do Evento:</label>
+                                <input type="text" class="form-control bodeinf" id="local" placeholder="Ex: Rua, Avenida e etc...">
+                            </div>
+                            <div class="form-group">
+                                <label for="url">Url:</label>
+                                <input type="url" class="form-control bodeinf" id="url" placeholder="Ex: www.organizador.com.br">
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-lg-6">
+                                    <label for="obs">Observação:</label>
+                                    <textarea id="obs" class="form-control bodeinf" placeholder="Ex: Levar RG, levar 1kg de alimento e etc..."></textarea>
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label for="descrition">Descrição</label>
+                                    <textarea id="descrition" class="form-control bodeinf" placeholder="Como será o evento, para que será e etc..."></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="imagenseve">Imagen:</label>
+                                <input type="file" class="form-control-file bodeinf" name="file">
+                            </div>
+                            <input type="submit" class="btn btn-dark mb-5" value="Enviar Formulário">
+                            <input type="reset" class="btn btn-dark mb-5" value="Limpe o Formulário">
+                        </form>
+                    </div>
+                    <div id="desenvolvedoras" class="container tab-pane">
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="imagens/ray.jpg" alt="imagen de avatar da desenvolvedora do api" class="bodeinf float-left mr-sm-3 " width="200" height="200">
+                                <h2 class="bordetf">Raysa Dutra Desenvolvedora JS.</h2>
+                                <p>Raysa Dutra, mora no Rio de Janeiro, zona sul, estudante de engenharia da computação e software, trabalha atualmente como desenvolvedora e consultora na VIsagio.</p>
+                                <p>Organizadora de inúmeras comunidades de eventos do rio de janeiro. Fundadora do Club da mozila na faculdade e vice-presidente do Club de algoritmos. Criadora de uma API organizador de eventos da área de tecnologia na região do Rio de Janeiro.</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="imagens/fany.jpg" alt="imagen da desnvolvedora do site" class="bodeinf float-right" width="200" height="200">
+                                    <h2 class="bordetf"> Sthefany Böttcher Desenvolvedora Web.</h2>
+                                    <p>Sthefany Böttcher, moradora da zona Sul de São Paulo e estudante de Técnico de informática no Senac com ênfase em manutenção (concluído), redes (concluído) e desenvolvimento de sistema (em andamento), a ser concluído em maio de 2019.</p>
+                                    <p>Organizadora dos projetos: <span class="font-weight-bold">“Sala de informática”</span> da ONG Sementes do amanhã, com a manutenção de 30 computadores e instalação do sistema operacional Linux educacional, o <span class="font-weight-bold">"sistema de rede"</span> na empresa Nutrial suplementos alimentícios, onde foi feita a instalação rede interna e configuração de servidor e criadora do <span class="font-weight-bold">"web site"</span> que abriga a API de eventos.
+                                   </p>
+                        </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <input type="button" onclick="Face()" class="face face1" src="imagens/md_5a9794da1b10e.png" name="Facebook" value=" " />
+            <input type="button" onclick="twitter()" class="twitter twitter1" src="imagens/twitter-circle-logo.png" name="Twitter" value=" " />
+            <input type="button" onclick="zap()" class="zap zap1" src="imagens/zap.png" name="Whatssap" value=" " />
+            <input type="button" data-target="_blank" onclick="telegram()" class="telegram telegram1" src="imagens/telegram.png" name="Telegran" value=" " />
+            <input type="button" onclick="instagram()" class="instagram instagram1" src="imagens/instagram-png.png" name="Instagram" value=" " />
+        </footer>
+    </div>
+</body>
+</html>
